@@ -49,6 +49,7 @@ fuzzy_test = fuzzy_interval(regressor_model,regressor_window=5,regress_compile_d
                 
 fuzzy_test.fit(X_train,y_train)
 predictions = fuzzy_test.predict(X_test)
+
 #measures % of values covered by intervals
 coverage = fuzzy_test.evaluate(y_test,predictions,method = 'coverage')
 #measures adjusted average width of intervals
