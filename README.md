@@ -82,4 +82,38 @@ For more information on `WindowGenerator` object and methods please see docs.
 
 ### Rolling_Window
 
+We finally provide `Rolling_Validation` object to streamline model validation for time series.
+Time series provide particular challenges to the validation process, including suceptibility to
+lookahead bias and information leakage.  One way of addressing this is through a rolling window 
+validation framework implemented here. Details about this process can be found [here](https://medium.com/@soumyachess1496/cross-validation-in-time-series-566ae4981ce4)
+
+
+```python
+from src.features.timeseriesprocessing import Rolling_Validation
+from src.models.clusterintervals import fuzzy_cluster
+
+inputs = pd.read_csv("inputs.csv")  # data importing
+targets = pd.read_csv('targets.csv')
+
+window_length = (1/8)*len(inputs) #length of data in given window
+
+shift = (1/12)*len(inputs) #length of 'roll' forward for each window
+
+model = fuzzy_cluster #class that can be instantiated with a parameter dictionary
+
+fixed_parameter_dict = { #parameters to instantiate model class that will stay fixed during rolling validation process
+"regressor_model":[Bidirectional(LSTM(units=256, return_sequences=False,dropout = .2)),Dense(units=1)],                      
+"regressor_window":10, "regress_compile_dict": {"optimizer":'adam', "loss":'mean_squared_error',
+"metrics":["mean_absolute_percentage_error"]},
+"regress_model_dict":{"verbose":True, "epochs":50},"clusters":3, "cluster_alpha":.05,
+"interval_model":[Bidirectional(LSTM(units=256 return_sequences=False,dropout = .2)),Dense(units=2)],
+"interval_window":40,"interval_model_dict":{"epochs":100,"batch_size":32,"verbose":True},
+"interval_compile_dict":{"loss":"mean_squared_error","optimizer":"adam"},
+}
+
+e_model = Rolling_Validation(window_model.inputs,window_model.targets,window_length,
+shift,model,fixed_parameter_dict)
+```
+
+For more information on the `Rolling_Validation` object please see docs.
 ## Data
