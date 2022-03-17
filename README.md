@@ -33,7 +33,8 @@ interval_model = [keras.layers.Bidirectional(keras.layers.LSTM(units=256,
 return_sequences=False,dropout = .2)),keras.layers.Dense(units=2)]
 
 #compile dictionaries are arguments fed to compile method for keras.models
-regress_compile_dict ={"optimizer":'adam', "loss":'mean_squared_error',"metrics":["mean_absolute_percentage_error"]}
+regress_compile_dict ={"optimizer":'adam', "loss":'mean_squared_error',
+"metrics":["mean_absolute_percentage_error"]}
 
 interval_compile_dict={"loss":"mean_squared_error","optimizer":"adam"}
 
@@ -56,6 +57,28 @@ coverage = fuzzy_test.evaluate(y_test,predictions,method = 'coverage')
 pinaw = fuzzy_test.evaluate(y_test,predictions,method = 'interval_width_average) 
 ```
 ### WindowGenerator
+We also offer a WindowGenerator object that assists in the creation of time windowing
+of multiple timeseries for feature construction for LSTM models.
+
+```python
+from src.models.features.timeseriesprocessing import WindowGenerator
+
+data = pd.read_csv("x_train.csv")  # data importing
+
+look_back = 10 #number of previous timesteps to use as features
+
+shift = 1 #number of timesteps ahead to forecast
+
+target_length = 1 #number of timesteps being forecasted
+
+target_columns = [x for x in data.columns if 'target' in x]
+
+input_columns = [x for x in data.columns if x not in target_columns]
+
+window_model = WindowGenerator(data,look_back,shift,target_length,input_columns,target_columns) 
+```
+
+For more information on `WindowGenerator` object and methods please see docs.
 
 ### Rolling_Window
 
