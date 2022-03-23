@@ -117,3 +117,5 @@ shift,model,fixed_parameter_dict)
 
 For more information on the `Rolling_Validation` object please see docs.
 ## Data
+
+The dataset provided is combpiled from the Yahoo Finance API, gold.org, U.S Energy and Information Administration, and fred.stlouisfed.org. Yahoo Finance data includes daily High, Low, Volume and Close.  The processed dataset includes dates from 12/30/2003 to 6/30/2021. Targets are daily returns for sector ETFs including: XLY, XLP, XLE, XLF, XLV, XLI, XLK, XLB, XLU. Features can be subgrouped into US Fixed Income, Exchange Rates, Global Indecies, US Sector ETFs, and Comodities. A summary of features and targets can be found below. Processed features were outer joined and forward filled.
