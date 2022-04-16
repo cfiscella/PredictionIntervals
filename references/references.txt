@@ -1,0 +1,8 @@
+Useful Links:
+
+WindowGenerator Object:
+https://www.tensorflow.org/tutorials/structured_data/time_series#4_create_tfdatadatasets
+
+Attention Based LSTM Implementation:
+https://levelup.gitconnected.com/building-seq2seq-lstm-with-luong-attention-in-keras-for-time-series-forecasting-1ee00958decb
+https://colab.research.google.com/github/kmkarakaya/ML_tutorials/blob/master/seq2seq_Part_F_Encoder_Decoder_with_Bahdanau_%26_Luong_Attention_Mechanism.ipynb
