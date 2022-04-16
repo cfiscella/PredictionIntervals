@@ -1,6 +1,6 @@
 Useful Links:
 
-WindowGenerator Object:
+WindowGenerator Object for Time Series Processing:
 https://www.tensorflow.org/tutorials/structured_data/time_series#4_create_tfdatadatasets
 
 Attention Based LSTM Implementation:
