@@ -1,1 +1,9 @@
-
+numpy
+pandas
+matplotlib
+tensorflow
+keras
+scipy
+sklearn
+fuzzy-c-means
+arch
