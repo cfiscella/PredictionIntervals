@@ -12,7 +12,7 @@ from keras.layers import Dropout
 from keras.models import Sequential, Model, load_model
 from keras.layers import LSTM, Dense, RepeatVector, TimeDistributed, Input, BatchNormalization, Bidirectional,multiply, concatenate, Flatten, Activation, dot,Layer
 
-from scipy.stats import pearsonr,zscore
+from scipy.stats import zscore
 
 from fcmeans import FCM
 from arch import arch_model
