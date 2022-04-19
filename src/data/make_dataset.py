@@ -1,3 +1,4 @@
+###need to address how raw_data is imported and where interim data is saved
 import numpy as np
 import pandas as pd
 
