@@ -13,6 +13,7 @@ from keras.layers import Dropout
 from keras.models import Sequential, Model, load_model
 from keras.layers import LSTM, Dense, RepeatVector, Input, BatchNormalization, Bidirectional,multiply, concatenate, Flatten, Activation, dot,Layer
 
+from src.features.ts_process.validation import RollingValidation
 from src.features.ts_process.standardize import WindowMinMaxScaler
 
 from src.models.model.baseline import interval_baseline
