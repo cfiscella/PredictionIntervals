@@ -176,15 +176,15 @@ for etf in target_etfs:
   
 
 # create a binary pickle file 
-f_truth = open("truth_dict.pkl","wb")
+f_truth = open("/reports/truth_dict.pkl","wb")
 pickle.dump(truth_dict,f_truth)
 f_truth.close()
 
-f_baseline = open("baseline_dict","wb")
+f_baseline = open("/reports/baseline_dict","wb")
 pickle.dump(baseline_result_dict,f_baseline)
 f_baseline.close()
 
-f_model =open("model_dict","wb")
+f_model =open("/reports/model_dict","wb")
 pickle.dump(model_result_dict,f_model)
 f_model.close()
 
