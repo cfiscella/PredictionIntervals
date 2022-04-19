@@ -1,3 +1,6 @@
+###what's left: find data path, save raw results (predictions) save efficiency calculations, check imports are correct
+import pickle
+
 import tensorflow as tf
 
 import pandas as pd
@@ -14,7 +17,7 @@ from keras.models import Sequential, Model, load_model
 from keras.layers import LSTM, Dense, RepeatVector, Input, BatchNormalization, Bidirectional,multiply, concatenate, Flatten, Activation, dot,Layer
 
 from src.features.ts_process.validation import RollingValidation
-from src.features.ts_process.standardize import WindowMinMaxScaler
+from src.features.ts_process.scale import WindowMinMaxScaler
 
 from src.models.model.baseline import interval_baseline
 from src.models.model.fuzzy_interval import fuzzy_interval
@@ -171,7 +174,19 @@ for etf in target_etfs:
   baseline_result_dict[etf] = e_baseline.experiment_dict
   truth_dict[etf] = e_baseline.true_dict
   
-###need to break here to save stuff that can then be used to visualize
+
+# create a binary pickle file 
+f_truth = open("truth_dict.pkl","wb")
+pickle.dump(truth_dict,f_truth)
+f_truth.close()
+
+f_baseline = open("baseline_dict","wb")
+pickle.dump(baseline_result_dict,f_baseline)
+f_baseline.close()
+
+f_model =open("model_dict","wb")
+pickle.dump(model_result_dict,f_model)
+f_model.close()
 
 test_index = pd.MultiIndex.from_product([[],[],[]], names=["etf","experiment", "bound"])
 truth_index = pd.MultiIndex.from_product([[],[]], names=["etf","experiment"])
