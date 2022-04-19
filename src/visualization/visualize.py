@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
 
-baseline_to_read = open(,"rb")
+baseline_to_read = open("/reports/baseline_dict.pkl","rb")
 baseline_result_dict = pickle.load(baseline_to_read)
 
-model_to_read = open(,"rb")
+model_to_read = open("/reports/model_dict.pkl","rb")
 model_result_dict = pickle.load(model_to_read)
 
-truth_to_read = open(,"rb")
+truth_to_read = open("/reports/truth_dict.pkl","rb")
 truth_dict = pickle.load(truth_to_read)
 
 for etf in model_result_dict.keys():
