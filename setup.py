@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='PredictionIntervals',
     version='0.1',
-    packages=find_packages()
+    packages=find_packages(),
     license='Creative Commons Attribution-Noncommercial-Share Alike license',
     install_requires = ['numexpr==2.8.1',
                         'pygments==2.6.1',
@@ -69,6 +69,6 @@ setup(
                         'ipywidgets==7.7.0',
                         'pickleshare==0.7.5',
                         'h5py==3.1.0',
-                        'fuzzy-c-means==1.6.3']
+                        'fuzzy-c-means==1.6.3'],
     long_description=open('README.txt').read(),
 )
