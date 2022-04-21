@@ -70,5 +70,5 @@ setup(
                         'pickleshare==0.7.5',
                         'h5py==3.1.0',
                         'fuzzy-c-means==1.6.3'],
-    long_description=open('README.txt').read(),
+    #long_description=open('README.txt').read(),
 )
