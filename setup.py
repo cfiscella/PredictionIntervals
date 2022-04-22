@@ -3,11 +3,9 @@ from setuptools import setup, find_packages
 setup(
     name='PredictionIntervals',
     version='0.1',
-    packages=(find_packages()+find_packages(where="./features")+find_packages(where="./models")),
-    #packages=['src', 'src.features', 'src.features.ts_process', 'src.models.model']
-    package_dir=(
-        "" "."
-    )
+    #packages=(find_packages()+find_packages(where="./features")+find_packages(where="./models")),
+    #packages=['src', 'src.subpackages', 'src.subpackages.ts_process', 'src.subpackages.model']
+    packages = find_packages()
     license='Creative Commons Attribution-Noncommercial-Share Alike license',
     install_requires = [
                         'tensorboard>=2.8.0',
