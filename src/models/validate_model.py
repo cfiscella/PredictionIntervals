@@ -22,7 +22,7 @@ from src.features.ts_process.scale import WindowMinMaxScaler
 from src.models.model.baseline import interval_baseline
 from src.models.model.fuzzy_interval import fuzzy_interval
 
-data = pd.read_csv('/content/drive/Shareddrives/Prediction Intervals/Data/CompleteDataSet/processed_dataset.csv',parse_dates = True,index_col = "DATE")
+data = pd.read_csv('processed_dataset1.csv',parse_dates = True,index_col = "DATE")
 
 ###defining sub-models
 def seq2seq(time_steps,n_hidden,n_features):
