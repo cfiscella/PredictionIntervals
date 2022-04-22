@@ -16,11 +16,11 @@ from keras.layers import Dropout
 from keras.models import Sequential, Model, load_model
 from keras.layers import LSTM, Dense, RepeatVector, Input, BatchNormalization, Bidirectional,multiply, concatenate, Flatten, Activation, dot,Layer
 
-from src.features.ts_process.validate import RollingValidation
-from src.features.ts_process.scale import WindowMinMaxScaler
+from src.subpackages.ts_process.validate import RollingValidation
+from src.subpackages.ts_process.scale import WindowMinMaxScaler
 
-from src.models.model.baseline import interval_baseline
-from src.models.model.fuzzy_interval import fuzzy_interval
+from src.subpackages.model.baseline import interval_baseline
+from src.subpackages.model.fuzzy_interval import fuzzy_interval
 
 data = pd.read_csv('processed_dataset1.csv',parse_dates = True,index_col = "DATE")
 
