@@ -1,6 +1,6 @@
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
-from src.features.ts_process.shape import shape_data, dissolve
+from src.subpackages.ts_process.shape import shape_data, dissolve
 
 class WindowStandardScaler(StandardScaler):
 
