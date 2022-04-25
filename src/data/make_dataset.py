@@ -18,8 +18,5 @@ data.drop(drop_XLC,axis =1, inplace = True)
 
 data = data.astype("float64")
 
-#cwd = os.getcwd()
 
-#saved_path = 'interim_dataset1.csv'
-
-data.to_csv('interim_dataset1.csv')
+data.to_csv('interim_dataset_local.csv')
