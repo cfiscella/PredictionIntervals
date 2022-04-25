@@ -4,10 +4,14 @@ Stock Price Prediction Intervals w/ LSTM and Fuzzy Clustering
 
 ## Installation
 
-```bash
-$ pip install PredictionIntervals
-```
+The simplest way to recreate the project is to clone the repository, set it as your current working directory and run the make command:
 
+```bash
+$ git clone https://github.com/cfiscella/PredictionIntervals/
+$ cd ./PredictionIntervals
+$ make
+```
+Local recreations of model results will be saved int he current working directory.
 ## Usage
 
 ### Fuzzy Interval
