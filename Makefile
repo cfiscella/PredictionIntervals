@@ -1,21 +1,21 @@
-ROOT_DIR:=./
-SRC_DIR:=./src
+ROOT_DIR := ./
+SRC_DIR := ./src
 
 .PHONY: all setup data features model visualizations
 
 all: data features model visualizations
 
-setup: requirements.txt
-  pip install -r $(ROOT_DIR)/requirements.txt
+setup:
+	pip install PredictionIntervals
 
-data: setup make_dataset.py
-  python $(SRC_DIR)/data/make_dataset.py
+data: setup
+	python $(SRC_DIR)/data/make_dataset.py data/raw/raw_full_dataset.csv
 
-features: data build_features.py
-  python $(SRC_DIR)/features/build_features.py
+features: data
+	python $(SRC_DIR)/features/build_features.py
 
-model: features validate_model.py
-  python $(SRC_DIR)/models/validate_model.py
+model: features
+	python $(SRC_DIR)/models/validate_model.py reports/report_local.csv
 
-visualizations: model visualize.py
-  python $(SRC_DIR)/visualization/visualize.py
+visualizations: model
+	python $(SRC_DIR)/visualization/visualize.py reports/figures/figures_local
