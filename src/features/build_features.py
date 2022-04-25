@@ -4,7 +4,7 @@ import pandas as pd
 
 
 
-interim = pd.read_csv('interim_dataset1.csv',parse_dates = True,index_col = "DATE")
+interim = pd.read_csv('interim_dataset_local.csv',parse_dates = True,index_col = "DATE")
 
 etfs = ['XLY',  'XLP', 'XLE', 'XLF', 'XLV', 'XLI', 'XLK', 'XLB', 'IYR', 'XLU']
 
@@ -14,4 +14,4 @@ for etf in etfs:
 
 preprocessed =interim.iloc[:-1,:]
 
-preprocessed.to_csv('processed_dataset1.csv')
+preprocessed.to_csv('processed_dataset_local.csv')
