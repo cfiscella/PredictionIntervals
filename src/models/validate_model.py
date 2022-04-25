@@ -1,5 +1,8 @@
 ###what's left: find data path, save raw results (predictions) save efficiency calculations, check imports are correct
 import pickle
+import sys
+
+path_to_save = sys.argv[1]
 
 import tensorflow as tf
 
@@ -16,11 +19,11 @@ from keras.layers import Dropout
 from keras.models import Sequential, Model, load_model
 from keras.layers import LSTM, Dense, RepeatVector, Input, BatchNormalization, Bidirectional,multiply, concatenate, Flatten, Activation, dot,Layer
 
-from src.subpackages.ts_process.validate import RollingValidation
+from src.subpackages.ts_process.validate import Rolling_Validation
 from src.subpackages.ts_process.scale import WindowMinMaxScaler
 
 from src.subpackages.model.baseline import interval_baseline
-from src.subpackages.model.fuzzy_interval import fuzzy_interval
+from src.subpackages.model.fuzzy_intervals import fuzzy_interval
 
 data = pd.read_csv('processed_dataset1.csv',parse_dates = True,index_col = "DATE")
 
@@ -246,4 +249,4 @@ result_to_save = result["Efficiency"]
 
 ###need to save
 
-result_to_save.to_csv(***path to save results)
+result_to_save.to_csv(path_to_save)
