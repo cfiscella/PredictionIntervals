@@ -2,7 +2,7 @@
 
 Stock Price Prediction Intervals w/ LSTM and Fuzzy Clustering
 
-## Installation
+## Installation and Recreation
 
 The simplest way to recreate the project is to clone the repository, set it as your current working directory and run the make command:
 
@@ -13,7 +13,7 @@ $ make
 ```
 Local recreations of model results will be saved in your current working directory.
 
-The project also supports `$ tox` which will report successful if median perofrmance accross all ETFs across all rolling windows is greater than median performance of baseline model.
+The project also supports `$ tox` command which will report successful if median perofrmance accross all ETFs across all rolling windows is greater than median performance of baseline model.
 
 ## Usage
 
