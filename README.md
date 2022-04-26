@@ -11,7 +11,10 @@ $ git clone https://github.com/cfiscella/PredictionIntervals/
 $ cd ./PredictionIntervals
 $ make
 ```
-Local recreations of model results will be saved int he current working directory.
+Local recreations of model results will be saved in your current working directory.
+
+The project also supports '''bash $ tox''' which will report successful if median perofrmance accross all ETFs across all rolling windows is greater than median performance of baseline model.
+
 ## Usage
 
 ### Fuzzy Interval
