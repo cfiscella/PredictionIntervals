@@ -1,1 +1,12 @@
-numexpr==2.8.1pygments==2.6.1requests==2.23.0idna==2.10uritemplate==3.0.1tensorboard==2.8.0astor==0.8.1statsmodels==0.13.2psutil==5.4.8gast==0.5.3numpy==1.21.5numba==0.51.2traitlets==5.1.1portpicker==1.3.9tblib==1.7.0certifi==2021.10.8tensorflow==2.8.0oauth2client==4.1.3sklearn==0.0llvmlite==0.34.0bottleneck==1.3.4httplib2==0.17.4chardet==3.0.4debugpy==1.0.0cffi==1.15.0tornado==5.1.1pyasn1==0.4.8pyparsing==3.0.8urllib3==1.24.3wcwidth==0.2.5packaging==21.3kiwisolver==1.4.2ipykernel==4.10.1arch==5.2.0ptyprocess==0.7.0pycparser==2.21six==1.15.0pyarrow==6.0.1matplotlib==3.2.2pandas==1.3.5pexpect==4.8.0scipy==1.4.1cloudpickle==1.3.0jax==0.3.4simplegeneric==0.8.1decorator==4.4.2dill==0.3.4rsa==4.8threadpoolctl==3.1.0joblib==1.1.0flatbuffers==2.0termcolor==1.1.0jaxlib==0.3.2+cuda11.cudnn805cycler==0.11.0keras==2.8.0astunparse==1.6.3patsy==0.5.2pathlib==1.0.1pydantic==1.9.0wrapt==1.14.0pytz==2018.9ipywidgets==7.7.0pickleshare==0.7.5h5py==3.1.0fuzzy-c-means==1.6.3fuzzy-c-means==1.6.3
+tensorboard==2.8.0
+statsmodels==0.13.2
+numpy<=1.21.5
+oauth2client==4.1.3
+sklearn>=0.0
+arch==5.2.0
+matplotlib==3.2.2
+tensorflow<=2.8.0
+pandas==1.3.5
+scipy==1.4.1
+keras==2.8.0
+fuzzy-c-means>=1.6.3
